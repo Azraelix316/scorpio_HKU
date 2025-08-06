@@ -126,7 +126,7 @@ public:
 		pub_ = n_.advertise<geometry_msgs::Twist>("/cmd_vel", 1);
 		pub_pwm = n_.advertise<scorpio_base::CarPwm>("/pwmvalue", 1);
 		ros::NodeHandle n_private("~");
-		n_private.param("walk_vel", walk_vel_, 0.2);          // 0.5
+		n_private.param("walk_vel", walk_vel_, 0.5);          // 0.5
 		n_private.param("run_vel", run_vel_, 0.5);            // 1.0
 		n_private.param("yaw_rate", yaw_rate_, 1.0);          // 1.0
 		n_private.param("yaw_rate_run", yaw_rate_run_, 1.5);  // 1.5
